@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows-Inspired Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title">Task Manager</div>
+            <div class="window-controls">
+                <button class="btn minimize"><i class="fas fa-minus"></i></button>
+                <button class="btn maximize"><i class="fas fa-square"></i></button>
+                <button class="btn close"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="window-content">
+            <div class="task-input">
+                <input type="text" id="task-input" placeholder="Add a new task">
+                <button onclick="addTask()"><i class="fas fa-plus"></i> Add Task</button>
+            </div>
+            <div class="task-filters">
+                <button onclick="filterTasks('all')" class="filter-btn active">All</button>
+                <button onclick="filterTasks('active')" class="filter-btn">Active</button>
+                <button onclick="filterTasks('completed')" class="filter-btn">Completed</button>
+            </div>
+            <ul id="task-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
